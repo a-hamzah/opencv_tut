@@ -1,6 +1,11 @@
 import cv2
 
-img = cv2.imread('assets/animboy.jpeg', -1)
+# Loading an image
+
+img = cv2.imread('assets/animboy.jpeg', 0)
+
+# Resizing an image
+
 img = cv2.resize(img, (400, 400))
 
 cv2.imshow('bingo', img)
