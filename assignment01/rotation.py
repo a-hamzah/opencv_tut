@@ -3,10 +3,11 @@ import numpy as np
 
 img = cv2.imread('assets/cat1.jpg', 0)      # Loading an image
 height, width = img.shape[:2]
-center = (height//2, width//2)
+
+center = (height/2, width/2)
 
 
-rot_matrix = cv2.getRotationMatrix2D(center, 15, 1)
+rot_matrix = cv2.getRotationMatrix2D(center, 90, 0.5)
 
 rotated_img = cv2.warpAffine(img, rot_matrix, (width, height))
 
