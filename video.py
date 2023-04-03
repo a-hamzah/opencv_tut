@@ -12,9 +12,9 @@ while True:
     
     tiny_img = cv2.resize(vid, (0, 0), fx=0.5, fy=0.5)
     
-    my_img_frame[:height//2, :width//2] = tiny_img
+    my_img_frame[:height//2, :width//2] = cv2.rotate(tiny_img, cv2.ROTATE_180)
     my_img_frame[height//2:, :width//2] = tiny_img
-    my_img_frame[:height//2, width//2:] = tiny_img
+    my_img_frame[:height//2, width//2:] = cv2.rotate(tiny_img, cv2.ROTATE_180)
     my_img_frame[height//2:, width//2:] = tiny_img
 
     cv2.imshow('webcam', my_img_frame)
