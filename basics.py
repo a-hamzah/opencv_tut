@@ -2,7 +2,7 @@ import cv2
 
 # Loading an image
 
-img = cv2.imread('assets/animboy.jpeg', 0)
+img = cv2.imread('assets/animboy.jpeg', 1)
 
 # Resizing an image
 
